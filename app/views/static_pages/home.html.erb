@@ -1,2 +1,43 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, '') %>
+<div class="center hero-unit">
+  <h1>Welcome to LEI @ ISPGaya</h1>
+    <h2>
+      This is the comunity  
+      <a href="http://www.ispgaya.pt/">ISPGaya website</a>
+      created by students, to students.
+      </h2>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary", id: "signup_btn" %>
+</div>
+
+  <div class="row features">
+   <h3>Technology used to put this project up.</h3>
+    <div class="span6">
+      <%= link_to image_tag("ruby.png", alt: "Ruby"), 'http://ruby-lang.org/' %>
+         <h4>Ruby</h4>
+         <p>Ruby is the main programming language behind the framework used to build this website.</p>
+         <%= link_to "Learn more", '#', class: "btn disabled", id: "button_lm" %>
+     </div>
+
+    <div class="span6">
+      <%= link_to image_tag("rails.png", alt: "ISPGaya"), 'http://rubyonrails.org//' %>
+           <h4>Rails</h4>
+           <p>Ruby on Rails or simply 'Rails' is a framework for database driven web development writed in Ruby language</p>
+           <%= link_to "Learn more", '#', class: "btn disabled", id: "button_lm" %>
+    </div>
+
+    <div class="span6">
+       <%= link_to image_tag("htmlcss.png", alt: "ISPGaya"), 'http://www.ispgaya.pt/' %>
+           <h4>Other technologys</h4>
+           <p>Among other technologys used to build and run this project are HTML5, CSS, Bootstrap, RSpec...</p> 
+           <%= link_to "Learn more", '#', class: "btn disabled", id: "button_lm" %>
+    </div>
+ </div>
+
+
+  
+
+<%= link_to image_tag("ispgaya_small.png",id: "logo_ispg", alt: "ISPGaya"), 'http://www.ispgaya.pt/' %>
+
+
+
+

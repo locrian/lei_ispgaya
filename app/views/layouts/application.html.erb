@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LeiIspgaya</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
-
-<%= yield %>
-
+ <%= render 'layouts/header' %>
+ <!-- <%= yield %>-->				        	<!--Page body's go here with "yield", comented this in container so it can have full width-->
+  <div class="container">
+    <%= yield %> 					<!-- Page body's go here with "yield"-->
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
 </body>
 </html>
+

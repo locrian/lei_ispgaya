@@ -1,0 +1,188 @@
+@import "bootstrap";
+
+/*mixins , variables, etc */
+
+$grayMediumLight: #eaeaea;
+$customButtonBlue: rgb(0,180,255);
+
+@mixin box_sizing {               /* Sass minix permits a group of css rules to be used in other elements, for example in .debug_dump below (cap 7)*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Home */
+
+.center {
+  
+  text-align: left; 
+  height: 200px; 
+  #signup_btn{
+  margin-top: 30px;
+  }
+
+  h1 { 					/* Header 1 of the home Page */
+  text-align: left;
+  margin-top: -60px;
+  margin-bottom: 10px;
+  }
+  h2 { 					/* Header 2 of the home Page */
+  text-align: left;
+  color: white;
+  }
+} 
+
+.row {
+text-align: center;
+}
+
+
+
+.hero-unit {				/* Main zone o the home page */
+  padding: 80px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  background-image: url(edificio_grad.jpg);
+  background-repeat: no-repeat;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.span6{
+width: 300px;
+text-align: center;
+ #button_lm{ 				/* Button's "Learn more" of the home page"*/
+   margin-top: 10px;
+   &:hover{
+        color: white;
+	background: $customButtonBlue;
+   }
+ }
+}
+
+#logo_ispg{
+margin-top: 60px;    			/*top margin of the ISPgaya image before the footer */
+}
+
+/* typografy */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight; 				/* defenido no LESS no bootstrap */
+}
+
+h3 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+  color: $grayLight;
+}
+
+h4 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;  
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white; /* built in color */
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white; /* built in color */
+    text-decoration: none;
+  }
+} 
+#isp_colors {
+  float: left;
+  margin-right: 10px;
+  padding-top: 6px;
+  line-height: 1;
+  }
+
+
+/*  footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+   color: $gray; /* built in color gray */
+   &:hover {
+    color: $grayDarker; /* grayDarker */
+   }
+ }
+
+  small {
+   float: left;
+}
+
+  ul {
+  float: right;
+  list-style: none;
+  li {
+    float: left ;
+    margin-left: 10px;
+   }
+ }
+}
+/* Miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+ }
+
+
